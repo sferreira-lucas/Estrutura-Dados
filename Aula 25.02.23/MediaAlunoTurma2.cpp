@@ -8,16 +8,16 @@ main()
 	setlocale(LC_ALL, "Portuguese");
 	
 	float notas[5][4], mediaTurma, mediaAluno;
-	int aluno, nota, alunos =1;
+	int aluno, nota, quantidadeAluno = 5, quantidadeProva = 4, alunos =1;
 	mediaTurma = 0;
 	
-	for(aluno = 0; aluno < 2; aluno++)
+	for(aluno = 0; aluno < quantidadeAluno; aluno++)
 	{
-		printf("Digite as 4 notas do %iº aluno:\n", alunos++);
+		printf("Digite as 4 notas do %iÂº aluno:\n", alunos++);
 		
 		mediaAluno = 0;
 
-		for(nota = 0; nota < 4; nota++)
+		for(nota = 0; nota < quantidadeProva; nota++)
 		{
 			scanf("%f", &notas[aluno][nota]);
 			
@@ -25,14 +25,14 @@ main()
 		}
 	
 		mediaAluno = mediaAluno / 4;
-		printf("Média do Aluno: %.2f\n\n", mediaAluno);
+		printf("MÃ©dia do Aluno: %.2f\n\n", mediaAluno);
 		
 		mediaTurma = mediaTurma + mediaAluno;
 		printf("Soma: %.2f\n");
 	}
 	
 	mediaTurma = mediaAluno / 4;
-	printf("Média da Turma: %.2f\n", mediaTurma);
+	printf("MÃ©dia da Turma: %.2f\n", mediaTurma);
 	
 	return 0;
 }
